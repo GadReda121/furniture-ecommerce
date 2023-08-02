@@ -22,7 +22,7 @@ export default {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 100px;
+    padding: 50px;
     background-color: var(--secondary-bg);
     gap: .5rem;
 }
