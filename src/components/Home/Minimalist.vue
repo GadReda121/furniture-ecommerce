@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="mi">
         <MinimalistComponent 
         imageSrc = "../../../public/images/new1.jpg"
         title="New minimalist–components"
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style scoped>
-div{
+.mi{
     display: flex;
     flex-direction: column;
     gap: 2rem;

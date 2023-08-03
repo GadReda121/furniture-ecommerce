@@ -1,6 +1,6 @@
 <template>
     <div class="FooterItems">
-        <ul>
+        <ul class="p-0">
             <h6 class="mb-3 fw-bolder">{{ title }}</h6>
             <li>
                 <RouterLink to="">

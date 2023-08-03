@@ -31,7 +31,6 @@ section{
 }
 section img{
     width: 100%;
-    min-width: 380px;
 }
 
 @media screen and (max-width:767px){

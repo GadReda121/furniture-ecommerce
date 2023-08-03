@@ -1,13 +1,15 @@
 <template>
-    <div class="news">
-        <div class="text">
-            <h1>Join our Newsletter</h1>
-            <p>Nulla ac convallis lorem, eget euismod nisl. bibendum nec.</p>
+    <div class="newsletter">
+        <div class="news">
+            <div class="text">
+                <h1>Join our Newsletter</h1>
+                <p>Nulla ac convallis lorem, eget euismod nisl. bibendum nec.</p>
+            </div>
+            <form action="">
+                <input type="email" placeholder="Your E-mail" />
+                <button type="submit">Submit</button>
+            </form>
         </div>
-        <form action="">
-            <input type="email" placeholder="Your E-mail" />
-            <button type="submit">Submit</button>
-        </form>
     </div>
 </template>
 
@@ -18,12 +20,18 @@ export default {
 </script>
 
 <style scoped>
+.newsletter{
+    background-color: var(--secondary-bg);
+    width: 100%;
+}
 .news{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 50px;
-    background-color: var(--secondary-bg);
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
     gap: .5rem;
 }
 .news form{
@@ -47,13 +55,13 @@ export default {
     box-shadow: 0 0 100px rgba(0,0,0,.5);
     width: fit-content;
 }
-
+.news form button:hover{
+    background-color: var(--secondary-bg);
+}
 @media screen and (max-width:800px){
     .news{
         display: grid;
-        grid-template-columns: repeat(1,1fr);
         text-align: center;
-        padding: 50px;
     }
     .news form{
         width: 100%;
