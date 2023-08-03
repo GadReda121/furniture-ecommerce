@@ -1,8 +1,8 @@
 <template>
-    <header class="Laptop">
+    <header>
         <!-- Logo -->
-        <div class="logo">
-            <img src="../public/images/fi-logo.svg" alt="">
+        <div class="logo Laptop">
+            <img src="../public/images/fi-logo.svg" alt="Logo">
             <!-- Menu Item -->
             <ul>
                 <router-link to="">
@@ -16,6 +16,31 @@
                 </router-link>
             </ul>
         </div>
+        <div class="logo Mob">
+            <div class="meuIcon">
+                <font-awesome-icon icon="fa-solid fa-bars" class="fs-4" @click="menuDown" v-show="bars"/>
+                <font-awesome-icon icon="fa-solid fa-xmark" class="fs-4" @click="menuUp" v-show="xmark" />
+            </div>
+            <div class="logoImage">
+                <img src="../public/images/fi-logo.svg" alt="Logo">
+            </div>
+            <!-- Menu Item -->
+            <ul v-show="menu" :class="effect">
+                <router-link to="">
+                    Home
+                </router-link>
+                <router-link to="">
+                    Products
+                </router-link>
+                <router-link to="">
+                    Contact Us
+                </router-link>
+                <form action="">
+                    <font-awesome-icon icon="fa-solid fa-magnifying-glass" class="glass"/>
+                    <input type="search" name="" id="" placeholder="Search...">
+                </form>
+            </ul>
+        </div>
         <!-- Another Tools (Search + Sign in + CAR) -->
         <div class="tools">
             <form action="">
@@ -26,7 +51,6 @@
                 <font-awesome-icon icon="fa-solid fa-user" />
                 Sign In
             </a>
-
             <!-- Modal -->
             <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
                 <div class="modal-dialog" role="document">
@@ -61,91 +85,15 @@
                     </div>
                 </div>
             </div>
-
-            <!-- cart -->
-            <a href="">
-                <span class="num">0</span>
-                <font-awesome-icon icon="fa-solid fa-cart-shopping" />
-            </a>
-        </div>
-    </header>
-    <header class="Mob">
-        <!-- Logo -->
-        <div class="logo">
-            <div class="meuIcon">
-                <font-awesome-icon icon="fa-solid fa-bars" class="fs-4" @click="menuDown" v-show="bars"/>
-                <font-awesome-icon icon="fa-solid fa-xmark" class="fs-4" @click="menuUp" v-show="xmark" />
-            </div>
-            <div class="logoImage">
-                <img src="../public/images/fi-logo.svg" alt="">
-            </div>
-            <!-- Menu Item -->
-            <ul v-show="menu" :class="effect">
-                <router-link to="">
-                    Home
-                </router-link>
-                <router-link to="">
-                    Products
-                </router-link>
-                <router-link to="">
-                    Contact Us
-                </router-link>
-                <form action="">
-                    <font-awesome-icon icon="fa-solid fa-magnifying-glass" class="glass"/>
-                    <input type="search" name="" id="" placeholder="Search...">
-                </form>
-            </ul>
-        </div>
-        <!-- Another Tools (Search + Sign in + CAR) -->
-        <div class="tools">
-            <a href="" data-bs-toggle="modal" data-bs-target="#modalIdMob">
-                <font-awesome-icon icon="fa-solid fa-user" />
-                Sign In
-            </a>
-            <!-- Modal -->
-            <div class="modal fade" id="modalIdMob" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header border-0">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="container-fluid">
-                                <form class="d-flex flex-column gap-3">
-                                    <div class="d-grid gap-1">
-                                        <label for="">Email Address</label>
-                                        <input type="email" class="form-control" placeholder="email@example.com"/>
-                                    </div>
-                                    <div class="d-grid gap-1">
-                                        <label for="">Password</label>
-                                        <input type="password" class="form-control" placeholder="Password"/>
-                                    </div>
-                                    <div class="d-flex align-items-center gap-1">
-                                        <input type="checkbox" />
-                                        Remember Me
-                                    </div>
-                                    <button type="submit" class="signInBtn rounded-0">Sign In</button>
-                                    <hr />
-                                    <div class="d-flex justify-content-between mb-3 links">
-                                        <a href="">Forget Password?</a>
-                                        <a href="">Sign Up</a>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- cart -->
-            <a href="">
-                <span class="num">0</span>
-                <font-awesome-icon icon="fa-solid fa-cart-shopping" />
-            </a>
+            <Asidebare />
         </div>
     </header>
 </template>
 
 <script>
+import Asidebare from './Asidebare.vue';
+import Card from './components/Home/Card.vue';
+
 export default {
     name: "Header",
     data() {
@@ -153,8 +101,8 @@ export default {
             menu: false,
             bars: true,
             xmark: false,
-            effect: ""
-        }
+            effect: "",
+        };
     },
     methods: {
         menuDown() {
@@ -171,7 +119,8 @@ export default {
                 this.xmark = false;
             }, 500);
         },
-    }
+    },
+    components: { Card, Asidebare }
 }
 </script>
 
@@ -188,16 +137,16 @@ header{
     display: flex;
 }
 .Mob{
-    display: none;
+    display: none !important;
 }
 @media screen and (max-width:767px){
     .Laptop{
-        display: none;
+        display: none !important;
     }
     .Mob{
-        display: flex;
+        display: flex !important;
     }
-    .Mob .logo {
+    .Mob {
         display: flex;
         align-items: center;
         width:50%;
@@ -206,11 +155,11 @@ header{
     .Mob .tools{
         width: 50%;
     }
-    .Mob .logo .logoImage{
+    .Mob .logoImage{
         display: flex;
         justify-content: flex-end;
     }
-    .Mob .logo .logoImage img{
+    .Mob .logoImage img{
         width: 20px;
     }
     .Mob ul{
@@ -248,6 +197,9 @@ header{
         border-radius: 5px;
         background-color: var(--bg);
         border: 2px solid var(--secondary-bg);
+    }
+    .tools form{
+        display: none;
     }
 }
 header .logo {
@@ -305,21 +257,6 @@ header .glass{
 header .tools a{
     color: var(--text-color);
     text-decoration: none;
-}
-header .tools a{
-    position: relative;
-}
-header .tools a .num{
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    background-color: var(--secondary-bg);
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .signInBtn{
     background-color: #28A745;

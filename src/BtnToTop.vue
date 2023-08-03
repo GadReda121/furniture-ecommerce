@@ -36,7 +36,7 @@ export default {
     position: absolute;
     top: 90%;
     right: 60px;
-    z-index: 999999999999999;
+    z-index: 999999;
 }
 .btnToTop .icon{
     background: var(--secondary-bg);
