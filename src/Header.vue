@@ -8,7 +8,7 @@
                 <router-link to="/">
                     Home
                 </router-link>
-                <router-link to="">
+                <router-link to="/Products">
                     Products
                 </router-link>
                 <router-link to="/ContactUs">
@@ -29,7 +29,7 @@
                 <router-link to="/">
                     Home
                 </router-link>
-                <router-link to="">
+                <router-link to="/Products">
                     Products
                 </router-link>
                 <router-link to="/ContactUs">
