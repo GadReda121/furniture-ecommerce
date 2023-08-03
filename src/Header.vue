@@ -5,13 +5,13 @@
             <img src="../public/images/fi-logo.svg" alt="Logo">
             <!-- Menu Item -->
             <ul>
-                <router-link to="">
+                <router-link to="/">
                     Home
                 </router-link>
                 <router-link to="">
                     Products
                 </router-link>
-                <router-link to="">
+                <router-link to="/ContactUs">
                     Contact Us
                 </router-link>
             </ul>
@@ -26,13 +26,13 @@
             </div>
             <!-- Menu Item -->
             <ul v-show="menu" :class="effect">
-                <router-link to="">
+                <router-link to="/">
                     Home
                 </router-link>
                 <router-link to="">
                     Products
                 </router-link>
-                <router-link to="">
+                <router-link to="/ContactUs">
                     Contact Us
                 </router-link>
                 <form action="">
@@ -88,6 +88,7 @@
             <Asidebare />
         </div>
     </header>
+    <router-view />
 </template>
 
 <script>
@@ -131,7 +132,7 @@ header{
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
-    background-color: var(--primary-bg)
+    background-color: var(--primary-bg);
 }
 .Laptop{
     display: flex;

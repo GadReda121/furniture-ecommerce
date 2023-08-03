@@ -11,7 +11,7 @@ import Minimalist from '../components/Home/Minimalist.vue';
 import Newsletter from '../components/Home/Newsletter.vue';
 import Swipper from '../components/Home/swipper.vue';
 export default {
-  name:"HomeView",
+  name: "HomeView",
   components:{ Swipper, Minimalist, Newsletter }
 }
 </script>
