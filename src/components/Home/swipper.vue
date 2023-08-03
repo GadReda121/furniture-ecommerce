@@ -6,7 +6,7 @@
     :modules="modules"
     class="mySwiper"  
     :autoplay="{
-        delay: 2000,
+        delay: 2000000,
         disableOnInteraction: false,
     }"   
     :loop="true">
@@ -59,6 +59,7 @@ export default {
 .swiper-slide img {
   display: block;
   width: 100%;
+  height: inherit;
   object-fit: cover;
 }
 </style>

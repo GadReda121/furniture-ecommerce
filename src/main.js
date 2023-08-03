@@ -20,11 +20,11 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 /* import font awesome icon component */
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 /* import specific icons */
-import { faBars, faCartShopping, faMagnifyingGlass, faUser, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faArrowUp, faBars, faCartShopping, faMagnifyingGlass, faUser, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { faPinterest, faSquareFacebook, faSquareInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
 /* add icons to the library */
-library.add(faMagnifyingGlass, faUser, faCartShopping, faTwitter, faPinterest, faSquareFacebook, faSquareInstagram, faBars, faXmark);
+library.add(faMagnifyingGlass, faUser, faCartShopping, faTwitter, faPinterest, faSquareFacebook, faSquareInstagram, faBars, faXmark, faArrowUp);
 
 const app = createApp(App)
 /* add font awesome icon component */
