@@ -22,10 +22,46 @@
                 <font-awesome-icon icon="fa-solid fa-magnifying-glass" class="glass"/>
                 <input type="search" name="" id="" placeholder="Search...">
             </form>
-            <a href="">
+            <a href="" data-bs-toggle="modal" data-bs-target="#modalId">
                 <font-awesome-icon icon="fa-solid fa-user" />
                 Sign In
             </a>
+
+            <!-- Modal -->
+            <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header border-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <form class="d-flex flex-column gap-3">
+                                    <div class="d-grid gap-1">
+                                        <label for="">Email Address</label>
+                                        <input type="email" class="form-control" placeholder="email@example.com"/>
+                                    </div>
+                                    <div class="d-grid gap-1">
+                                        <label for="">Password</label>
+                                        <input type="password" class="form-control" placeholder="Password"/>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <input type="checkbox" />
+                                        Remember Me
+                                    </div>
+                                    <button type="submit" class="signInBtn rounded-0">Sign In</button>
+                                    <hr />
+                                    <div class="d-flex justify-content-between mb-3 links">
+                                        <a href="">Forget Password?</a>
+                                        <a href="">Sign Up</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- cart -->
             <a href="">
                 <span class="num">0</span>
@@ -62,10 +98,44 @@
         </div>
         <!-- Another Tools (Search + Sign in + CAR) -->
         <div class="tools">
-            <a href="">
+            <a href="" data-bs-toggle="modal" data-bs-target="#modalIdMob">
                 <font-awesome-icon icon="fa-solid fa-user" />
                 Sign In
             </a>
+            <!-- Modal -->
+            <div class="modal fade" id="modalIdMob" tabindex="-1" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header border-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <form class="d-flex flex-column gap-3">
+                                    <div class="d-grid gap-1">
+                                        <label for="">Email Address</label>
+                                        <input type="email" class="form-control" placeholder="email@example.com"/>
+                                    </div>
+                                    <div class="d-grid gap-1">
+                                        <label for="">Password</label>
+                                        <input type="password" class="form-control" placeholder="Password"/>
+                                    </div>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <input type="checkbox" />
+                                        Remember Me
+                                    </div>
+                                    <button type="submit" class="signInBtn rounded-0">Sign In</button>
+                                    <hr />
+                                    <div class="d-flex justify-content-between mb-3 links">
+                                        <a href="">Forget Password?</a>
+                                        <a href="">Sign Up</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- cart -->
             <a href="">
                 <span class="num">0</span>
@@ -162,7 +232,7 @@ header{
     .Mob form{
         position: relative;
     }
-    .Mob input{
+    .Mob input[type='search']{
         width: 40px;
         background-color: #eee;
         border:none;
@@ -173,7 +243,7 @@ header{
         padding-right: .5rem;
         transition: linear .5s;
     }
-    .Mob input:focus{
+    .Mob input[type='search']:focus{
         width: 100%;
         border-radius: 5px;
         background-color: var(--bg);
@@ -209,7 +279,7 @@ header .tools{
 header .tools form{
     position: relative;
 }
-header .tools input{
+header .tools input[type='search']{
     width: 40px;
     background-color: #eee;
     border:none;
@@ -220,7 +290,7 @@ header .tools input{
     padding-right: .5rem;
     transition: linear .5s;
 }
-header .tools input:focus{
+header .tools input[type='search']:focus{
     width: 100%;
     border-radius: 5px;
     background-color: var(--bg);
@@ -250,5 +320,22 @@ header .tools a .num{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.signInBtn{
+    background-color: #28A745;
+    border: none;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,.1);
+    color: #ffffff;
+    border-bottom: 2px solid #000;
+}
+.links a{
+    width: 50%;
+    padding: 5px;
+    text-align: center;
+}
+.links a:hover{
+    padding: 5px;
+    background-color: #eee;
 }
 </style>
