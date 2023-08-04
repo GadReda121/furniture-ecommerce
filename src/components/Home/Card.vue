@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style scoped>
-.cardParent{
+.cardParent {
     width: 100%;
     height: 100vh;
     display: grid;
@@ -36,15 +36,17 @@ export default {
     z-index: 9999999;
     position: fixed;
 }
-.cardParent .content{
+
+.cardParent .content {
     background-color: #303E49;
     color: #fff;
     text-align: center;
     padding: 30px;
-    box-shadow: -3px 0 200px rgba(0,0,0,.1);
+    box-shadow: -3px 0 200px rgba(0, 0, 0, .1);
 }
-@media screen and (max-width:767px){
-    .cardParent{
+
+@media screen and (max-width:767px) {
+    .cardParent {
         grid-template-columns: 20% 80%;
     }
 }
