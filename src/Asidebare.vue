@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Card from './components/Home/card.vue';
+import Card from './components/Home/Card.vue';
 export default {
     name: "Asidebare",
     data() {
