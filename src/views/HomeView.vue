@@ -17,6 +17,7 @@ export default {
 </script>
 <style>
 main{
+  background-color: var(--primary-bg);
   display: flex;
   flex-direction: column;
   gap: 5rem;

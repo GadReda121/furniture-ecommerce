@@ -5,13 +5,13 @@
             <img src="../public/images/fi-logo.svg" alt="Logo">
             <!-- Menu Item -->
             <ul>
-                <router-link to="/">
+                <router-link to="/" exact-active-class="active">
                     Home
                 </router-link>
-                <router-link to="/Products">
+                <router-link to="/Products" exact-active-class="active">
                     Products
                 </router-link>
-                <router-link to="/ContactUs">
+                <router-link to="/ContactUs" exact-active-class="active">
                     Contact Us
                 </router-link>
             </ul>
@@ -26,13 +26,13 @@
             </div>
             <!-- Menu Item -->
             <ul v-show="menu" :class="effect">
-                <router-link to="/">
+                <router-link to="/" exact-active-class="active">
                     Home
                 </router-link>
-                <router-link to="/Products">
+                <router-link to="/Products" exact-active-class="active">
                     Products
                 </router-link>
-                <router-link to="/ContactUs">
+                <router-link to="/ContactUs" exact-active-class="active">
                     Contact Us
                 </router-link>
                 <form action="">
@@ -221,6 +221,12 @@ header ul{
 header ul a{
     text-decoration: none;
     color: var(--text-color);
+}
+header ul a:hover{
+    color: #F2BE00;
+}
+.active{
+    color: #F2BE00;
 }
 header .tools{
     display: flex;

@@ -1,7 +1,7 @@
 <template>
     <div class="p-5 mb-5 contact">
         <div class="d-flex">
-            <img src="../../public/images/contactUs.jpg" alt="Contact Us" class="w-100 rounded"/>
+            <img src="../../public/images/contactUs.jpg" alt="Contact Us" class="w-100 rounded" loading="lazy" />
         </div>
         <div class="content">
             <h2>Hello There</h2>
