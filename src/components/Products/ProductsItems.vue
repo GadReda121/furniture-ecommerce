@@ -12,7 +12,7 @@ export default {
 
 <style scoped>
 .ProductItems{
-    width:75%;
+    width:80%;
     margin: auto;
 }
 </style>
