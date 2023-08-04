@@ -9,10 +9,12 @@ import "bootstrap/dist/css/bootstrap.css";
 import Swiper from 'swiper';
 // import Swiper styles
 import 'swiper/css';
-
+// !Vuex
+import index from "./store/index";
+import Vuex from "vuex";
 // !Animation
 import "animate.css";
-
+// !Main Css
 import './assets/main.css';
 
 /* import the fontawesome core */
@@ -28,8 +30,9 @@ library.add(faMagnifyingGlass, faUser, faCartShopping, faTwitter, faPinterest, f
 
 const app = createApp(App)
 /* add font awesome icon component */
+
 app.component('font-awesome-icon', FontAwesomeIcon)
-
-app.use(router)
-
+app.use(router);
+app.use(index);
+app.use(Vuex);
 app.mount('#app')
