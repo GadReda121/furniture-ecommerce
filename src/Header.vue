@@ -140,7 +140,7 @@ header{
 .Mob{
     display: none !important;
 }
-@media screen and (max-width:767px){
+@media screen and (max-width:800px){
     .Laptop{
         display: none !important;
     }

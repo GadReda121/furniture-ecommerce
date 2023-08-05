@@ -1,4 +1,5 @@
 <template>
+    <Preloader v-if="isPreload"/>
     <div class="p-5 mb-5 contact">
         <div class="d-flex">
             <img src="../../public/images/contactUs.jpg" alt="Contact Us" class="w-100 rounded" loading="lazy" />
@@ -17,8 +18,20 @@
 </template>
 
 <script>
+import Preloader from '../Preloader.vue';
 export default {
-    name: "ContactUs"
+    name: "ContactUs",
+    data() {
+        return {
+            isPreload: true,
+        }
+    },
+    created() {
+        setTimeout(() => {
+            this.isPreload = false;
+        }, 2000);
+    },
+    components: { Preloader }
 }
 </script>
 
