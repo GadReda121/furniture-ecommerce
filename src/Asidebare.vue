@@ -2,7 +2,7 @@
     <div>
         <!-- cart -->
         <a href="" @click.prevent="showCard">
-            <span class="num">0</span>
+            <span class="num">{{ getNum }}</span>
             <font-awesome-icon icon="fa-solid fa-cart-shopping" />
         </a>
         <Card v-show="card" :class="cardEffect" id="cardy"/>
@@ -10,9 +10,13 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import Card from './components/Home/Card.vue';
 export default {
     name: "Asidebare",
+    computed: {
+        ...mapGetters(['getNum'])
+    },
     data() {
         return {
             card: false,

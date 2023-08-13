@@ -11,6 +11,7 @@
           <h3 class="item-title">{{ item.title }}</h3>
           <p class="item-price">{{ formatCurrency(item.price) }}</p>
         </div>
+        
       </div>
 </template>
 
@@ -67,6 +68,7 @@ export default {
         addToCart(item) {
             // Implement your logic to add the item to the cart
             console.log('Added to cart:', item);
+            this.$store.state.data.push(item)
         },
         showDescription(item) {
             // Implement your logic to show the item's description
