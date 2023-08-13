@@ -7,7 +7,7 @@
         </div>
         <div class="ProductDesc">
             <div class="image">
-                <img :src="getImagePath" alt="Product Image" />
+                <img :src="'../../' + $store.state.cards.image" alt="Product Image" />
             </div>
             <div class="details">
                 <h1>{{ this.$store.state.cards.title }}</h1>
@@ -81,16 +81,6 @@ export default {
         return {
             num: "1"
         }
-    },
-      computed: {
-        ...mapState({
-            image: state => state.cards.image
-        }),
-        getImagePath() {
-            const pathPrefix = '../../public/'; // Change this to your actual prefix
-            return pathPrefix + this.image;
-        },
-        // ... Other computed properties and methods
     },
     methods: {
         addToCart(item) {
