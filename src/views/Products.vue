@@ -1,5 +1,6 @@
 <template>
-    <div class="product">
+    <Preloader v-if="isPreload"/>
+    <div class="product" v-else>
         <ProductTitle />
         <ProductsItems />
         <Newsletter />
@@ -10,10 +11,21 @@
 import Newsletter from '../components/Home/Newsletter.vue';
 import ProductTitle from '../components/Products/ProductTitle.vue';
 import ProductsItems from '../components/Products/ProductsItems.vue';
+import Preloader from '../Preloader.vue';
 
 export default {
     name: "Products",
-    components: { ProductTitle, Newsletter, ProductsItems }
+    data() {
+        return {
+            isPreload: true,
+        }
+    },
+    created() {
+        setTimeout(() => {
+            this.isPreload = false;
+        }, 2000);
+    },
+    components: { ProductTitle, Newsletter, ProductsItems, Preloader }
 }
 </script>
 
