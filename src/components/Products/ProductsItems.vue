@@ -148,6 +148,9 @@ ul>li>a{
 }
 
 @media screen and (max-width: 767px){
+    .ProductItems{
+        width:90%;
+    }
     .ProductItems .allProducts{
         grid-template-columns: 50% 50%;
     }

@@ -35,11 +35,11 @@ export default {
 .btnToTop{
     position: absolute;
     top: 90%;
-    right: 60px;
+    right: 100px;
     z-index: 999999;
 }
 .btnToTop .icon{
-    background: var(--secondary-bg);
+    background: #303E49;
     color: #ffffff;
     padding: 12px 15px;
     cursor: pointer;

@@ -15,6 +15,12 @@
                         <button @click="Delete(it)">Delete</button>
                     </div>
                 </div>
+
+                    <div class="total-price">
+                        <p >
+                            Total Price: {{ this.$store.state.data.map((e)=> e.price).reduce((a,e)=> a+e) }} $
+                        </p>
+                    </div>
             </div>
             <p v-else>Your cart is empty, try to Add stuff.</p>
         </div>
@@ -102,7 +108,13 @@ export default {
     padding: 10px 30px;
     border: none;
     border-radius: 5px;
-
+}
+.total-price{
+    background-color: green;
+    padding: 20px;
+}
+.total-price p{
+    margin: 0;
 }
 @media screen and (max-width:767px) {
     .cardParent {
