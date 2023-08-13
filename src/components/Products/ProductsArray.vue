@@ -22,7 +22,7 @@ export default {
             items: [
                 {
                     id:'1',
-                    image: '../../../public/images/Products/1.jpg',
+                    image: 'images/Products/1.jpg',
                     title: 'Item 1',
                     price: 50.00,
                     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae placeat quod unde obcaecati molestias soluta provident impedit quasi illum amet quae illo vero, ullam ipsa, voluptates tempore facilis laborum veritatis?",
@@ -31,7 +31,7 @@ export default {
                 },
                 {
                     id:'2',
-                    image: '../../../public/images/Products/2.jpg',
+                    image: 'images/Products/2.jpg',
                     title: 'Item 2',
                     price: 75.00,
                     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae placeat quod unde obcaecati molestias soluta provident impedit quasi illum amet quae illo vero, ullam ipsa, voluptates tempore facilis laborum veritatis?",
@@ -40,7 +40,7 @@ export default {
                 },
                 {
                     id:'3',
-                    image: '../../../public/images/Products/3.jpg',
+                    image: 'images/Products/3.jpg',
                     title: 'Item 3',
                     price: 80.00,
                     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae placeat quod unde obcaecati molestias soluta provident impedit quasi illum amet quae illo vero, ullam ipsa, voluptates tempore facilis laborum veritatis?",
@@ -49,7 +49,7 @@ export default {
                 },
                 {
                     id:'4',
-                    image: '../../../public/images/Products/4.jpg',
+                    image: 'images/Products/4.jpg',
                     title: 'Item 4',
                     price: 90.00,
                     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae placeat quod unde obcaecati molestias soluta provident impedit quasi illum amet quae illo vero, ullam ipsa, voluptates tempore facilis laborum veritatis?",
@@ -58,7 +58,7 @@ export default {
                 },
                 {
                     id:'5',
-                    image: '../../../public/images/Products/5.jpg',
+                    image: 'images/Products/5.jpg',
                     title: 'Item 5',
                     price: 100.00,
                     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae placeat quod unde obcaecati molestias soluta provident impedit quasi illum amet quae illo vero, ullam ipsa, voluptates tempore facilis laborum veritatis?",
@@ -67,7 +67,7 @@ export default {
                 },
                 {
                     id:'6',
-                    image: '../../../public/images/Products/6.jpg',
+                    image: 'images/Products/6.jpg',
                     title: 'Item 6',
                     price: 120.00,
                     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae placeat quod unde obcaecati molestias soluta provident impedit quasi illum amet quae illo vero, ullam ipsa, voluptates tempore facilis laborum veritatis?",
@@ -76,7 +76,7 @@ export default {
                 },
                 {
                     id:'7',
-                    image: '../../../public/images/Products/7.jpg',
+                    image: 'images/Products/7.jpg',
                     title: 'Item 7',
                     price: 120.00,
                     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae placeat quod unde obcaecati molestias soluta provident impedit quasi illum amet quae illo vero, ullam ipsa, voluptates tempore facilis laborum veritatis?",
@@ -85,7 +85,7 @@ export default {
                 },
                 {
                     id:'8',
-                    image: '../../../public/images/Products/8.jpg',
+                    image: 'images/Products/8.jpg',
                     title: 'Item 8',
                     price: 120.00,
                     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae placeat quod unde obcaecati molestias soluta provident impedit quasi illum amet quae illo vero, ullam ipsa, voluptates tempore facilis laborum veritatis?",
@@ -94,7 +94,7 @@ export default {
                 },
                 {
                     id:'9',
-                    image: '../../../public/images/Products/9.jpg',
+                    image: 'images/Products/9.jpg',
                     title: 'Item 9',
                     price: 120.00,
                     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae placeat quod unde obcaecati molestias soluta provident impedit quasi illum amet quae illo vero, ullam ipsa, voluptates tempore facilis laborum veritatis?",
@@ -103,7 +103,7 @@ export default {
                 },
                 {
                     id:'10',
-                    image: '../../../public/images/Products/10.jpg',
+                    image: 'images/Products/10.jpg',
                     title: 'Item 10',
                     price: 120.00,
                     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae placeat quod unde obcaecati molestias soluta provident impedit quasi illum amet quae illo vero, ullam ipsa, voluptates tempore facilis laborum veritatis?",
@@ -112,7 +112,7 @@ export default {
                 },
                 {
                     id:'11',
-                    image: '../../../public/images/Products/11.jpg',
+                    image: 'images/Products/11.jpg',
                     title: 'Item 11',
                     price: 120.00,
                     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae placeat quod unde obcaecati molestias soluta provident impedit quasi illum amet quae illo vero, ullam ipsa, voluptates tempore facilis laborum veritatis?",
@@ -121,7 +121,7 @@ export default {
                 },
                 {
                     id:'12',
-                    image: '../../../public/images/Products/12.jpg',
+                    image: 'images/Products/12.jpg',
                     title: 'Item 12',
                     price: 120.00,
                     description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae placeat quod unde obcaecati molestias soluta provident impedit quasi illum amet quae illo vero, ullam ipsa, voluptates tempore facilis laborum veritatis?",

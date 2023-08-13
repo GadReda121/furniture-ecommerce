@@ -35,7 +35,7 @@ export default {
 .btnToTop{
     position: absolute;
     top: 90%;
-    right: 100px;
+    right: 60px;
     z-index: 999999;
 }
 .btnToTop .icon{
