@@ -7,7 +7,7 @@
         </div>
         <div class="ProductDesc">
             <div class="image">
-                <img :src="this.$store.state.cards.image" alt="" />
+                <img :src="this.$store.state.cards.image" alt="Product Image" />
             </div>
             <div class="details">
                 <h1>{{ this.$store.state.cards.title }}</h1>
