@@ -7,7 +7,7 @@
         </div>
         <div class="ProductDesc">
             <div class="image">
-                <img :src="this.$store.state.cards.image" alt="Product Image" />
+                <img :src="getImagePath" alt="Product Image" />
             </div>
             <div class="details">
                 <h1>{{ this.$store.state.cards.title }}</h1>
@@ -72,6 +72,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 import Newsletter from '../Home/Newsletter.vue';
 export default {
   components: { Newsletter },
@@ -80,6 +81,16 @@ export default {
         return {
             num: "1"
         }
+    },
+      computed: {
+        ...mapState({
+            image: state => state.cards.image
+        }),
+        getImagePath() {
+            const pathPrefix = '../../public/'; // Change this to your actual prefix
+            return pathPrefix + this.image;
+        },
+        // ... Other computed properties and methods
     },
     methods: {
         addToCart(item) {
@@ -155,6 +166,7 @@ form button[type='submit']{
     padding: 20px 30px;
     box-shadow: 0 0 20px rgba(0,0,0,.1);
     width: fit-content;
+    border:none
 }
 .routes{
     margin-top: 3rem;
