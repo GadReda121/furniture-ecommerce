@@ -6,7 +6,7 @@
             <hr />
             <div v-if="this.$store.state.data.length > 0" class="d-flex flex-column gap-2">
                 <div v-for="it in this.$store.state.data" :key="it" class="cardItem">
-                    <img :src="it.image" alt="Card Image" />
+                    <img :src="'../../' + it.image" alt="Card Image" />
                     <div class="d-flex flex-column">
                         <h4>{{ it.title }}</h4>
                         <p>{{ it.price + ' $' }}</p>
@@ -117,8 +117,16 @@ export default {
     margin: 0;
 }
 @media screen and (max-width:767px) {
+    .cardItem{
+        flex-direction: column;
+    }
     .cardParent {
         grid-template-columns: 20% 80%;
+    }
+}
+@media screen and (min-width:768px) and (max-width:991px){
+    .cardItem{
+        flex-direction: column;
     }
 }
 </style>
